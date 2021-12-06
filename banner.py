@@ -2,9 +2,9 @@
 import socket
 
 target = raw_input('Enter the IP/Domain: ')
-door = input('Enter the Door: ')
+port = input('Enter the Port: ')
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((target,door))
+client.connect((target,port))
 banner = client.recv(1024)
 print banner
